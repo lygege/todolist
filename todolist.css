@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header{
+    width: 100%;
+    height: 40px;
+    background: #4ebbfe;
+}
+form{
+    width: 900px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+form > input{
+    border: 1px solid #FFFFFF;
+    padding: 6px 12px;
+    border-radius: 5px;
+    height: 30px;
+    box-sizing: border-box;
+    font-size: 14px;
+    outline: none;
+    margin-right: 10px;
+}
+main{
+    width: 900px;
+    height: auto;
+    margin: 0 auto;
+    border: 1px solid #4ebbfe;
+    margin-top: 20px;
+}
+main .tab{
+    height: 40px;
+    display: flex;
+    line-height: 40px;
+    position: relative;
+}
+main .tab li{
+    width: 300px;
+    flex-grow: 1;
+    text-align: center;
+    border-bottom: 1px solid #4ebbfe;
+    border-right: 1px solid #4ebbfe;
+}
+main .tab  li.hot{
+    /*background: #4ebbfe;*/
+    color: #FFFFFF;
+    transition: all ease 1s;
+}
+.tab > .top{
+    width: 300px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #4ebbfe;
+    z-index: -1;
+    transition: all ease-in .5s;
+}
+li.hot:nth-child(1)~ .top{
+    transform: translate(0,0);
+}
+li.hot:nth-child(2)~ .top{
+    transform: translate(100%,0);
+}
+li.hot:nth-child(3)~ .top{
+    transform: translate(200%,0);
+}
+main .content li{
+    line-height: 3;
+    font-size: 20px;
+    color: #666666;
+    padding: 0 10px;
+    border-bottom: 1px dashed #4ebbfe;
+}
+.content >li p{
+    display: inline-block;
+}
+.content >li time{
+    float: right;
+}
+del{
+    float: right;
+    text-decoration: none;
+    margin-left: 20px;
+}
